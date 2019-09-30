@@ -1,12 +1,12 @@
 package br.com.rafael.sodexo.data.remote
 
-import br.com.rafael.sodexo.data.DataContract
+import br.com.rafael.sodexo.data.Repository
 import br.com.rafael.sodexo.domain.model.Movie
 import br.com.rafael.sodexo.utill.Either
 import br.com.rafael.sodexo.utill.Failure
 import retrofit2.Call
 
-class Remote(private val traktAPI: TraktAPI) : DataContract.Remote {
+class Remote(private val traktAPI: TraktAPI) : Repository.Remote {
 
     override fun getMovieTrending(): Either<Failure, List<Movie>> {
         return request(

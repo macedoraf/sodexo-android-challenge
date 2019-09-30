@@ -1,13 +1,13 @@
 package br.com.rafael.sodexo.domain.interactor
 
-import br.com.rafael.sodexo.data.DataContract
+import br.com.rafael.sodexo.data.Repository
 import br.com.rafael.sodexo.domain.model.Movie
 import br.com.rafael.sodexo.utill.Either
 import br.com.rafael.sodexo.utill.Failure
 import br.com.rafael.sodexo.domain.Interactor
 
 class GetMovieTranding(
-    private val remote: DataContract.Remote
+    private val remote: Repository.Remote
 ) : Interactor<List<Movie>, Interactor.None>() {
 
 

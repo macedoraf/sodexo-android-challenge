@@ -9,7 +9,7 @@ interface TraktAPI {
     companion object{
         const val API_KEY = "trakt-api-key: 780be90f854635f1420843494e2d7debed32758b577aadfbc7a0cd1d3af9d4fb"
         const val API_VERSION = "trakt-api-version: 2"
-        const val AUTORIZATION_BARRER_TOKEN = "Authorization"
+        const val AUTORIZATION_BARRER_TOKEN = "Authorization:0"
     }
 
     @Headers(

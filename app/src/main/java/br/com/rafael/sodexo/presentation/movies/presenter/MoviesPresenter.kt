@@ -8,16 +8,18 @@ import br.com.rafael.sodexo.utill.Failure
 
 class MoviesPresenter(
     private val getMovies: GetMovieTranding,
-    var view: MoviesContract.View? = null
+    private var view: MoviesContract.View? = null
 ) : MoviesContract.Presenter {
     override fun fetchMovies() {
         getMovies.invoke(Interactor.None()) { it.either(::handleFailure, ::handleSuccess) }
     }
 
     private fun handleFailure(failure: Failure) {
-        when(failure){
-            Failure.NetworkConnection -> {} //TODO : Implementar exeção de conexão
-            Failure.ServerError -> {} //TODO : Implementar exeção de server error
+        when (failure) {
+            Failure.NetworkConnection -> {
+            } //TODO : Implementar exeção de conexão
+            Failure.ServerError -> {
+            } //TODO : Implementar exeção de server error
         }
     }
 
